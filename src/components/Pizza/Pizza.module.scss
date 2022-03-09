@@ -1,0 +1,146 @@
+.pizzaBlock {
+  width: 270px;
+  text-align: center;
+  margin: 20px 15px 65px;
+  padding: 10px 10px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
+  img {
+    width: 260px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  &__selector {
+    display: flex;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 6px;
+
+    ul {
+      display: flex;
+      flex: 1;
+      padding: 0;
+      margin: 0;
+
+      li {
+        user-select: none;
+        margin: 3px;
+        padding: 8px;
+        list-style: none;
+        flex: 1;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 14px;
+        border-radius: 8px;
+
+        &:hover {
+          box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.04);
+          background-color: #ffffff;
+        }
+
+        &:active {
+          transform: translateY(2px);
+          background-color: #fcfcfc;
+          box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+
+    .active {
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.04);
+      background-color: #ffffff;
+      border-radius: 8px;
+    }
+
+    .disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    .button {
+      user-select: none;
+      display: inline-block;
+      border-radius: 15px;
+      padding: 10px 20px;
+      min-width: 100px;
+      text-align: center;
+      cursor: pointer;
+      border: 1px solid #e61e29;
+      transition: all 0.2s ease-in-out, transform 0.1s ease-in-out;
+
+      &:hover {
+        background-color: #e61e29;
+
+        span {
+          color: #ffffff;
+        }
+
+        i {
+          color: #e61e29;
+          background-color: #ffffff;
+        }
+
+        svg {
+          path {
+            fill: #ffffff;
+          }
+        }
+      }
+
+      &:active {
+        background-color: darken(#e61e29, 8%);
+        transform: translateY(-3px);
+      }
+
+      span {
+        margin: 0px 8px;
+        color: #e61e29;
+        font-weight: 600;
+        transition: all 0.2s ease-in-out;
+      }
+
+      i {
+        font-size: 14px;
+        font-weight: 600;
+        font-style: normal;
+        color: #ffffff;
+        background-color: #e61e29;
+        border-radius: 10px;
+        padding: 2px 8px;
+        transition: all 0.2s ease-in-out;
+      }
+
+      svg {
+        path {
+          fill: #e61e29;
+          transition: all 0.2s ease-in-out;
+        }
+      }
+    }
+  }
+
+  &__price {
+    margin-left: 5px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+  }
+}
