@@ -3,6 +3,8 @@ import Sort from "../components/Sort/Sort";
 import Carousel from "../components/Carousel/Carousel";
 import Categories from "../components/Categories/Categories";
 import Pizza from "../components/Pizza/Pizza";
+import {useDispatch, useSelector} from 'react-redux'
+import { setCategory } from "../redux/actions/filters";
 
 
 const categoriesNames = [
@@ -19,21 +21,31 @@ const sortNames = [
       {'id': 2, 'title':'алфавиту', 'type':'alphabet'},
     ]
 
-function Home({items}) {
-    return(
-        <div className="content">
-        <Carousel />
-        <div className="content__top">
-          <Categories 
-          items={categoriesNames}/>
-          <Sort 
-          items={sortNames}/>
-        </div>
-        <div className="content__title">
-          <h1>Пицца</h1>
-        </div>
-        <div className="content__items">
-          {items && items.map((obj) => (
+function Home() {
+  const items = useSelector(({pizzas}) => pizzas.items)
+  const dispatch = useDispatch()
+
+  const onSelectCategory  = React.useCallback(id => {
+    dispatch(setCategory(id))
+  }, [])
+  
+  return(
+      <div className="content">
+      <Carousel />
+      <div className="content__top">
+        <Categories 
+        items={categoriesNames}
+        onClickItem={onSelectCategory}/>
+        <Sort
+        sortTitle='Сортировать по:' 
+        items={sortNames}/>
+      </div>
+      <div className="content__title">
+        <h1>Пицца</h1>
+      </div>
+      <div className="content__items">
+        {items.length !== 0 ?
+            items.map((obj) => (
             <Pizza 
             key={obj.id}
             id={obj.id}
@@ -43,10 +55,15 @@ function Home({items}) {
             sizes={obj.sizes}
             imageUrl={obj.imageUrl}
             />
-          ))}
-        </div>
+          ))
+          :
+          <div className="no_items">
+            Товары не найдены :(
+          </div>
+        }
       </div>
-    );
+    </div>
+  );
 }
 
 export default Home;

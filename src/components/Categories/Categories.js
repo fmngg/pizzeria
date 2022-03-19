@@ -2,12 +2,13 @@ import React from "react";
 
 import styles from './Categories.module.scss'
 
-function Categories({items}) {
+const Categories = React.memo(function Categories({items, onClickItem}) {
 
     const [activeItem, setActiveItem] = React.useState(0)
 
     const onSelectItem = (id) => {
         setActiveItem(id);
+        onClickItem(id)
     }
 
     return(
@@ -22,5 +23,6 @@ function Categories({items}) {
         </ul>
     </div>);
 }
+)
 
 export default Categories;

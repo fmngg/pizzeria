@@ -1,8 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
+import Sort from "../Sort/Sort"
 
 import styles from './Header.module.scss'
+
+const sortNames = [
+  {'id': 0, 'title':'Минск'},
+  {'id': 1, 'title':'Марьина Горка'},
+  {'id': 2, 'title':'Фаниполь'},
+]
 
 function Header() {
     return (
@@ -16,6 +23,9 @@ function Header() {
             </div>
           </Link>
           <div className={styles.header__right}>
+            <Sort 
+            sortTitle='Город:'
+            items={sortNames}/>
             <div className={styles.telephone}>
               <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                 width="25" height="25" viewBox="0 0 1280.000000 1280.000000"

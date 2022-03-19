@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import styles from './Sort.module.scss'
 
-function Sort({items}) {
+const Sort = React.memo(function Sort({items, sortTitle}) {
 
   const [visible, setVisible] = React.useState(false)
   const [activeItem, setActiveItem] = React.useState(0)
@@ -47,7 +47,7 @@ function Sort({items}) {
                   fill="#2C2C2C"
                 />
               </svg>
-              <b>Сортировать по:</b>
+              <b>{sortTitle}</b>
               <span onClick={toggleVisible}>{items[activeItem].title}</span>
             </div>
             {visible && <div className={styles.sort__menu}>
@@ -63,6 +63,6 @@ function Sort({items}) {
             </div>}
           </div>
     );
-}
+})
 
 export default Sort;

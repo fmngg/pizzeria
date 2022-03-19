@@ -36,14 +36,21 @@ body {
 
     &__title {
       h1 {
+        margin: 20px 0px 0px;
         font-weight: 500;
-        margin-top: 20px;
       }
     }
 
     &__items {
-      display: flex;
       flex-wrap: wrap;
+      display: flex;
+
+      .no_items {
+        margin: 0;
+        padding: 0;
+        font-size: 22px;
+        font-weight: 600;
+      }
     }
   }
 }

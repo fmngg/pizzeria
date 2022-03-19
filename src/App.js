@@ -1,5 +1,6 @@
-import React, { useCallback, useState } from "react";
+import React from "react";
 import axios from 'axios';
+import {useDispatch} from 'react-redux'
 
 import "./App.scss"
 
@@ -8,27 +9,26 @@ import Header from "./components/Header/Header";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import { Route, Routes } from "react-router-dom";
+import { fetchPizzas, setPizzas } from './redux/actions/pizzas'
 
 function App() {
 
-  const [pizzas, setPizzas] = React.useState([])
+  //const [pizzas, setPizzas] = React.useState([])
+  const dispatch = useDispatch()
+
 
   React.useEffect(() => {
-    axios.get('http://localhost:3000/db.json').then(({data}) => {
-      setPizzas(data.pizzas)
-    })
+    dispatch(fetchPizzas())
   }, [])
 
   return (
     <div>
       <Header />
-
       <div className="wrapper"> 
         <Routes>
-          <Route path="/" element={<Home items={pizzas}/>}/>
+          <Route path="/" element={<Home />}/>
           <Route path="/cart" element={<Cart />}/>
         </Routes>
-
         <Footer />
       </div>
     </div>
@@ -37,7 +37,10 @@ function App() {
 
 
 // const mapStateToProps = state => {
-
+//   return {
+//     items: state.pizzas.items,
+//     filters: state.filters
+//   }
 // }
 
 // const mapDispatchToProps = dispatch => {

@@ -1,10 +1,8 @@
 import React from "react";
 import classNames from 'classnames';
-import PropTypes, { symbol } from 'prop-types';
+import PropTypes from 'prop-types';
 
 import styles from "./Pizza.module.scss"
-
-console.log(styles)
 
 function Pizza({id, imageUrl, name, price, types, sizes}) {
 
