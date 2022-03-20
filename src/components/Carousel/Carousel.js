@@ -46,7 +46,6 @@ const Carousel = React.memo(function Carousel() {
 
     return(
         <div className={styles.carousel}>
-            <h1>Акции</h1>
             <div className={styles.mainContainer}>
                 <FaChevronLeft className={styles.arrow} onClick={leftClickHanlder}/>
                 <div className={styles.window}>

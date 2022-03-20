@@ -11,7 +11,7 @@ function Header() {
             <div className={styles.header__logo}>
               <img className="logo-img" width={40} height={40} src="/img/logo.svg" alt="logo"/>
               <div>
-                <h3>дoмiнo'с</h3>
+                <h3>дoмiнo'с пицца</h3>
               </div>
             </div>
           </Link>

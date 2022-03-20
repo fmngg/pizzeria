@@ -8,7 +8,7 @@
 
 body {
   margin: 0;
-  font-family: 'Nunito', system-ui;
+  font-family: "Nunito", system-ui;
   background-color: rgb(139, 185, 253);
   margin-right: calc(-1 * (100vw - 100%));
   overflow-x: hidden;
@@ -18,6 +18,7 @@ body {
   padding-top: 60px;
   width: calc(100vw - 100px);
   height: 100%;
+
   background-color: #fff;
   margin: 0px auto 0px;
   max-width: 1440px;

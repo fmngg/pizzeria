@@ -1,0 +1,50 @@
+.pizzaFormShadow {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 11;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+
+    .pizzaForm {
+        padding: 30px;
+        display: flex;
+        width: 550px;
+        height: 220px;
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+        align-items: center;
+
+        img {
+            width: 250px;
+            height: 250px;
+        }
+
+        &__right {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            h4 {
+                font-weight: 600;
+                font-size: 20px;
+                margin: 0;
+            }
+            h5 {
+                font-size: 15px;
+                font-weight: 700;
+                margin: 10px 0px;
+            }
+            p {
+                font-size: 14px;
+                margin: 0;
+                color: #6f6f6f;
+            }
+        }
+    }
+}

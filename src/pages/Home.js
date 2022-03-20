@@ -9,6 +9,8 @@ import Loading from "../components/Pizza/Loading";
 import {useDispatch, useSelector} from 'react-redux'
 import { setCategory, setSortBy } from "../redux/actions/filters";
 import { fetchPizzas } from '../redux/actions/pizzas'
+import PizzaForm from "../components/PizzaForm/PizzaForm";
+import Footer from "../components/Footer/Footer";
 
 
 const categoriesNames = [
@@ -45,6 +47,7 @@ function Home() {
   
   return(
       <div className="content">
+      {/* <PizzaForm /> */}
       <Carousel />
       <div className="content__top">
         <Categories 
@@ -59,7 +62,6 @@ function Home() {
         />
       </div>
       <div className="content__title">
-        <h1>Пицца</h1>
       </div>
       <div className="content__items">
         {isLoaded ?
