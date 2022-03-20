@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import styles from "./Pizza.module.scss"
 
-function Pizza({id, imageUrl, name, price, types, sizes}) {
+function Pizza({id, imageUrl, name, price, types, sizes, category}) {
 
     const availableTypes  = [
         {'id':0, 'title':'тонкое'},
@@ -27,7 +27,6 @@ function Pizza({id, imageUrl, name, price, types, sizes}) {
     const onSelectSize = (id) => {
         setActiveSize(id)
     }
-
 
     return(
             <div 
@@ -100,9 +99,10 @@ Pizza.propTypes = {
 Pizza.defaultProps = {
     imageUrl: 'https://t3.ftcdn.net/jpg/04/34/72/82/360_F_434728286_OWQQvAFoXZLdGHlObozsolNeuSxhpr84.jpg',
     name: 'Пицца',
-    price: 999,
+    price: 0,
     types: [],
     sizes: [],
+    category: 0
 }
 
 export default Pizza; 

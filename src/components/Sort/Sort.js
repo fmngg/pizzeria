@@ -1,21 +1,20 @@
 import React from "react";
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 import styles from './Sort.module.scss'
 
-const Sort = React.memo(function Sort({items, sortTitle}) {
+const Sort = React.memo(function Sort({items, sortTitle, activeSortItem, onClickSortItem}) {
 
   const [visible, setVisible] = React.useState(false)
-  const [activeItem, setActiveItem] = React.useState(0)
   const sortRef = React.useRef()
-
 
   const toggleVisible = () => {
     setVisible(!visible)
   }
 
-  const onSelectItem = (id) => {
-    setActiveItem(id)
+  const onSelectItem = (type) => {
+    onClickSortItem(type)
     setVisible(false)
   }
 
@@ -48,21 +47,31 @@ const Sort = React.memo(function Sort({items, sortTitle}) {
                 />
               </svg>
               <b>{sortTitle}</b>
-              <span onClick={toggleVisible}>{items[activeItem].title}</span>
+              <span onClick={toggleVisible}>{items && items.find(obj => obj.type === activeSortItem).title}</span>
             </div>
             {visible && <div className={styles.sort__menu}>
               <ul>
                 {items && items.map((obj) => (<li
                     className={classNames({
-                      [styles.active] : activeItem === obj.id,
+                      [styles.active] : activeSortItem === obj.type,
                     })}
-                    onClick={() => onSelectItem(obj.id)}
-                    key = {obj.id}>{obj.title}</li>
+                    onClick={() => onSelectItem(obj)}
+                    key = {obj.type}>{obj.title}</li>
                     ))}
               </ul>
             </div>}
           </div>
     );
 })
+
+Sort.propTypes = {
+  activeSortItem: PropTypes.string.isRequired,
+  items: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
+}
+
+Sort.defaultProps = {
+  activeSortItem: 'popular',
+  items: []
+}
 
 export default Sort;

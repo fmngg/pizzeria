@@ -7,24 +7,24 @@
       "types": [0, 1],
       "sizes": [26, 30, 40],
       "price": 15,
-      "category": 0,
+      "category": 1,
       "rating": 4
     },
     {
       "id": 1,
       "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/2ffc31bb-132c-4c99-b894-53f7107a1441.jpg",
       "name": "Сырная",
-      "types": [0],
+      "types": [0, 1],
       "sizes": [26, 40],
       "price": 17,
-      "category": 1,
+      "category": 2,
       "rating": 6
     },
     {
       "id": 2,
       "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/6652fec1-04df-49d8-8744-232f1032c44b.jpg",
       "name": "Цыпленок барбекю",
-      "types": [0],
+      "types": [0, 1],
       "sizes": [26, 40],
       "price": 19,
       "category": 1,
@@ -34,10 +34,10 @@
       "id": 3,
       "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/af553bf5-3887-4501-b88e-8f0f55229429.jpg",
       "name": "Кисло-сладкий цыпленок",
-      "types": [1],
+      "types": [0, 1],
       "sizes": [26, 30, 40],
       "price": 19,
-      "category": 2,
+      "category": 1,
       "rating": 2
     },
     {
@@ -47,17 +47,17 @@
       "types": [0, 1],
       "sizes": [26, 30, 40],
       "price": 21,
-      "category": 3,
+      "category": 2,
       "rating": 8
     },
     {
       "id": 5,
       "imageUrl": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/1e1a6e80-b3ba-4a44-b6b9-beae5b1fbf27.jpg",
       "name": "Крэйзи пепперони",
-      "types": [0],
+      "types": [0, 1],
       "sizes": [30, 40],
       "price": 25,
-      "category": 2,
+      "category": 1,
       "rating": 2
     },
     {
@@ -77,7 +77,7 @@
       "types": [0, 1],
       "sizes": [26, 30, 40],
       "price": 25,
-      "category": 4,
+      "category": 2,
       "rating": 10
     },
     {
@@ -87,7 +87,7 @@
       "types": [0, 1],
       "sizes": [26, 30, 40],
       "price": 21,
-      "category": 5,
+      "category": 1,
       "rating": 10
     },
     {
@@ -97,22 +97,71 @@
       "types": [0, 1],
       "sizes": [26, 30, 40],
       "price": 21,
-      "category": 5,
+      "category": 2,
       "rating": 7
     },
     {
       "id": 10,
       "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/85ee29544cc2478cb89c9fad605a7e93_366x366.jpeg",
       "name": "Бублик-пицца",
-      "types": [0, 1],
+      "types": [1],
       "sizes": [26, 30, 40],
       "price": 21,
-      "category": 5,
+      "category": 3,
       "rating": 7
     },
     {
       "id": 11,
-      "category": 5,
+      "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/56ac34a504594b80a96b2a3490e617b3_366x366.jpeg",
+      "name": "Сырная Фикси-пицца 🌱👶",
+      "types": [1],
+      "sizes": [26],
+      "price": 17,
+      "category": 3,
+      "rating": 7
+    },
+    {
+      "id": 12,
+      "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/Products/2bb54b403cb642a58a85e750835ce29d_366x366.jpeg",
+      "name": "Фикси-пицца",
+      "types": [1],
+      "sizes": [26],
+      "price": 17,
+      "category": 3,
+      "rating": 7
+    },
+    {
+      "id": 13,
+      "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/ComboTemplates/e22ed2937d2549059b67d8edae4061e4_366x366.webp",
+      "name": "2 пиццы и напиток",
+      "types": [1],
+      "sizes": [30],
+      "price": 30,
+      "category": 4,
+      "rating": 7
+    },
+    {
+      "id": 14,
+      "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/ComboTemplates/73a29371f51e47d58341686a86cc9eb8_366x366.webp",
+      "name": "2 пиццы и закуска",
+      "types": [1],
+      "sizes": [30],
+      "price": 31,
+      "category": 4,
+      "rating": 7
+    },
+    {
+      "id": 15,
+      "imageUrl": "https://dodopizza-a.akamaihd.net/static/Img/ComboTemplates/3605b7ba0b6b4e0784f29663ff6de2ea_366x366.webp",
+      "name": "2 пиццы",
+      "types": [1],
+      "sizes": [30],
+      "price": 35,
+      "category": 4,
+      "rating": 7
+    },
+    {
+      "id": -1,
       "rating": 7
     }
   ]

@@ -6,7 +6,7 @@ function Button({onClick}) {
     return (
       <div onClick={onClick} className={styles.header__cart}>
         <span className={styles.header__money}>
-          16 р.
+          Корзина
         </span>
         <div className={styles.button__delimiter} />
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
